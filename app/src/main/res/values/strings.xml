@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DAA-Ejemplo2</string>
+    <string name="texto1">El Instituto Tecnológico de la Laguna es una universidad pública ubicada en la ciudad de Torreón. El Instituto Tecnológico de la Laguna forma parte del Tecnológico de La Laguna forma parte del Tecnológico Nacional de México</string>
+    <string name="texto2">El Instituto Tecnológico Regional de La Laguna, iniciando sus actividades el 26 de septiembre de 1965. A nivel medio superior se comenzó en 1965 con el Bachillerato de Ciencias y Tecnología en tres opciones: Eléctrica, Mecánica automotriz (combustión interna) y Mecánica (maquinas y herramientas). La población escolar ascendió a 352 estudiantes inscritos en los sogiuntes niveles: 125 en medio superior, 148 en técnico industrial y 52 técnicos agropecuarios, atendidos por 2 directores, 21 docentes y 8 personal administrativo.</string>
+    <string name="titulo">Instituto Tecnológico de la Laguna</string>
 </resources>
