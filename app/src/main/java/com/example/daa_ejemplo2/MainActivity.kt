@@ -52,7 +52,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
 @Composable
 fun ITL(modifier: Modifier = Modifier) {
     //Image
