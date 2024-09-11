@@ -51,11 +51,11 @@ fun Greeting() {
             fontSize = 30.sp,
             lineHeight = 35.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(10.dp)
+            modifier = Modifier.padding(0.dp, 20.dp, 0.dp, 0.dp)
         )
         Text(
             text = texto1,
-            fontSize = 17.sp,
+            fontSize = 20.sp,
             lineHeight = 20.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(20.dp)
@@ -63,9 +63,9 @@ fun Greeting() {
         )
         Text(
             text = texto2,
-            fontSize = 17.sp,
+            fontSize = 18.sp,
             lineHeight = 20.sp,
-            textAlign = TextAlign.Center,
+            textAlign = TextAlign.Left,
             modifier = Modifier.padding(20.dp)
         )
     }
