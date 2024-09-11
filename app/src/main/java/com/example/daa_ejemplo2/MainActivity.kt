@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             DAAEjemplo2Theme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.padding(),
                     color = MaterialTheme.colorScheme.background
                 ){
 
@@ -52,10 +52,8 @@ fun image(name: String, modifier: Modifier = Modifier) {
             contentDescription = null,
             contentScale = ContentScale.Crop
         )
-        imageAndText(string = "" )
     }
 }
-
 
 
 @Composable
@@ -63,27 +61,34 @@ fun imageAndText(modifier: Modifier = Modifier, string: String )
 {
     Column (
     verticalArrangement =Arrangement.Center,
-    modifier = modifier.padding(20.dp)
+    modifier = modifier.padding(
+        start = 16.dp,
+        top = 16.dp,
+        end = 2.dp,
+        bottom = 16.dp)
     ){
-        val image = painterResource(id = R.drawable.image)
-        Image(
-            painter = image,
-            contentDescription = null,
-            contentScale = ContentScale.Crop
-        )
+        image(name = "hi")
             Text(
                 text = "Instituto Tecnológico de la Laguna",
                 lineHeight = 30.sp,
-//                textAlign = TextAlign.Center,
-                fontSize = 8.sp,
-                modifier =Modifier
-                    .padding(10.dp)
+                textAlign = TextAlign.Center,
+                fontSize = 6.sp,
+                modifier = Modifier
+                    .padding(start = 16.dp,
+                        top = 16.dp,
+                        end = 16.dp)
+
             )
         Text(
             text = "El Instituto Tecnológico de la Laguna es una universidad pública ubicada en la ciudad de Torreón. El Instituto Tecnológico de la Laguna forma parte del Tecnológico Nacional de México",
             lineHeight = 10.sp,
             textAlign = TextAlign.Center,
-            fontSize = 8.sp
+            fontSize = 6.sp,
+            modifier = Modifier
+                .padding(start = 16.dp,
+                    top = 16.dp,
+                    end = 16.dp,
+                    bottom = 16.dp)
         )
         Text(
             text = "El Instituto Tecnológico Regional De La Laguna, iniciando sus actividades el 26 de Septiembre de\n" +
@@ -94,9 +99,12 @@ fun imageAndText(modifier: Modifier = Modifier, string: String )
 
             textAlign = TextAlign.Left,
             lineHeight = 10.sp,
-            fontSize = 8.sp,
+            fontSize = 6.sp,
             modifier = Modifier
-                .padding(10.dp)
+                .padding(start = 16.dp,
+                    top = 16.dp,
+                    end = 16.dp,
+                    bottom = 16.dp)
         )
     }
 }
@@ -105,8 +113,6 @@ fun imageAndText(modifier: Modifier = Modifier, string: String )
 @Composable
 fun GreetingPreview() {
     DAAEjemplo2Theme {
-        //Greeting(name = "android")
-//        imageAndText(string = "que tal")
         imageAndText(string = "Hi")
     }
 }
