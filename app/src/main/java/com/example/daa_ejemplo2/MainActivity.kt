@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -50,15 +51,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
         )
         Text(
-            text = name,
+            text = stringResource(R.string.txt1),
             modifier = modifier
                 .padding(16.dp,8.dp)
         )
         Text(
-            text = "El Instituto Tecnológico de La Laguna es una " +
-                    "universidad pública ubicada en la ciudad de " +
-                    "Torreón. El Instituto Tecnológico de La Laguna " +
-                    "forma parte del Tecnológico Nacional de México.",
+            text = stringResource(R.string.txt2),
             lineHeight = 16.sp,
             fontSize = 15.sp,
             textAlign = TextAlign.Center,
@@ -67,18 +65,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 .align(Alignment.CenterHorizontally)
         )
         Text(
-            text = "El Instituto Tecnológico Regional De La Laguna, " +
-                    "iniciando sus actividades el 26 de Septiembre de " +
-                    "1965. Anivel medio superior se comenzó en 1965 " +
-                    "con el Bachillerato de Ciencias y Tecnología en " +
-                    "tres opciones: Eléctrica, Mecánica automotriz " +
-                    "(combustión interna) y Mecánica (máquinas y " +
-                    "herramientas). La población escolar ascendió a " +
-                    "352 estudiantes inscritos en los siguientes niveles: " +
-                    "152 en medio superior, 148 en técnico industrial y " +
-                    "52 técnicos agropecuarios, atendidos por 2 " +
-                    "directores, 21 docentes y 8 personal " +
-                    "administrativo.",
+            text = stringResource(R.string.txt3),
             lineHeight = 16.sp,
             fontSize = 15.sp,
             modifier = modifier
