@@ -110,7 +110,7 @@ class MainActivity : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
-    fun InfoCardPreview() {
+    fun InfoCardPreview() { //se uso para el diseño
         DAAEjemplo2Theme {
             InfoCard()
         }
