@@ -15,6 +15,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -43,52 +44,61 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun image(name: String, modifier: Modifier = Modifier) {
+    Column (modifier = Modifier, verticalArrangement = Arrangement.Center){
+        val image = painterResource(id = R.drawable.image)
+        Image(
+            painter = image,
+            contentDescription = null,
+            contentScale = ContentScale.Crop
+        )
+        imageAndText(string = "" )
+    }
 }
 
 
+
 @Composable
-fun imageAndText(modifier: Modifier = Modifier, message:String, string: String )
+fun imageAndText(modifier: Modifier = Modifier, string: String )
 {
+    Column (
+    verticalArrangement =Arrangement.Center,
+    modifier = modifier.padding(50.dp)
+    ){
+            Text(
+                text = "Instituto Tecnológico de la Laguna",
+                lineHeight = 30.sp,
 
-    val imagen = painterResource(id = R.drawable.image)
-    Box{
-        Image(
-            painter = imagen,
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-
+                fontSize = 10.sp,
+                modifier =Modifier
+                    .padding(10.dp)
+                    .align(alignment = Alignment.End)
             )
+        Text(
+            text = "El Instituto Tecnológico de la Laguna es una universidad pública ubicada en la ciudad de Torreón. El Instituto Tecnológico de la Laguna forma parte del Tecnológico Nacional de México",
+            lineHeight = 10.sp,
+            fontSize = 10.sp
+        )
+        Text(
+            text = "El Instituto Tecnológico Regional De La Laguna, iniciando sus actividades el 26 de Septiembre de\n" +
+                    "1965. A nivel medio superior se comenzó en 1965 con el Bachillerato de Ciencias y Tecnologia en tres opciones: Electrica, Mecanica automotriz (combustión interna) y Mecánica (máquinas y herramientas). La población escolar ascendió a 352 estudiantes inscritos en los siguientes niveles\n" +
+                    "152 en medio superior, 148 en tecnico industral y\n" +
+                    "52 técnicos agropecuarios, atendidos por 2 directores, 21 docentes y 8 personal\n" +
+                    "aoministrativo",
+
+            textAlign = TextAlign.Center,
+            lineHeight = 12.sp,
+            fontSize = 8.sp
+        )
     }
-
-        Column(verticalArrangement = Arrangement.Center, modifier = modifier.padding(8.dp)){
-            
-            Text(
-                text = message,
-                fontSize = 5.sp,
-                lineHeight = 116.sp,
-                textAlign = TextAlign.Center
-            )
-            Text(
-                text = string,
-                fontSize = 5.sp,
-                lineHeight = 116.sp,
-                textAlign = TextAlign.Center
-            )
-
-        }
-
-
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     DAAEjemplo2Theme {
-            imageAndText(message = "Instituto Tecnológico de la Laguna", string = "El instituto tecnologico de la laguna es una universidad publica ubicada en la ciudad de Torreón. El instituto Tecnológico de la Laguna forma parte del Tecnológico Nacional de México.")
+        //Greeting(name = "android")
+//        imageAndText(string = "que tal")
+        image(name = "hola")
     }
 }
