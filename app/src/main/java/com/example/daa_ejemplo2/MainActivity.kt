@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -62,15 +63,10 @@ fun image(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun imageAndText(modifier: Modifier = Modifier, string: String) {
     Column(
-        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
-            .padding(
-                //start = 16.dp,
-                top = 16.dp,
-                end = 2.dp,
-                bottom = 16.dp
-            ).fillMaxSize()
+            .fillMaxSize()
+            .padding()
     ) {
         val image = painterResource(id = R.drawable.image)
         Image(
@@ -78,50 +74,52 @@ fun imageAndText(modifier: Modifier = Modifier, string: String) {
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
+                .fillMaxWidth()
         )
         Text(
             text = "Instituto Tecnológico de la Laguna",
             //lineHeight = 30.sp,
             textAlign = TextAlign.Center,
-            fontSize = 16.sp,
+            fontSize = 20.sp,
             modifier = Modifier
                 .padding(
                     start = 16.dp,
                     top = 16.dp,
-                    end = 16.dp
+                    end = 20.dp
                 )
 
         )
         Text(
-            text = "El Instituto Tecnológico de la Laguna es una \n " +
-                    "universidad pública ubicada en la ciudad de Torreón. \n" +
-                    "El Instituto Tecnológico de la Laguna \n" +
-                    "forma parte del Tecnológico Nacional de México \n",
+            text = "El Instituto Tecnológico de la Laguna es una  " +
+                    "universidad pública ubicada en la ciudad de Torreón. " +
+                    "El Instituto Tecnológico de la Laguna " +
+                    "forma parte del Tecnológico Nacional de México ",
             //lineHeight = 10.sp,
             textAlign = TextAlign.Center,
-            fontSize = 10.sp,
+            fontSize = 18.sp,
             modifier = Modifier
                 .padding(
-                    //start = 16.dp,
-                    top = 16.dp
+                    start = 16.dp,
+                    top = 16.dp,
+                    end = 16.dp,  //start = 16.dp,
                 )
         )
         Text(
-            text = "El Instituto Tecnológico Regional De La Laguna \n" +
-                    ", iniciando sus actividades el 26 de Septiembre de \n" +
-                    " 1965. A nivel medio superior se comenzó en \n" +
-                    " 1965 con el Bachillerato de Ciencias y Tecnologia en \n" +
-                    " tres opciones: Electrica, Mecanica automotriz \n" +
-                    " (combustión interna) y Mecánica (máquinas y \n" +
-                    "herramientas). La población escolar ascendió a \n" +
-                    "352 estudiantes inscritos en los siguientes niveles \n" +
-                    " 152 en medio superior, 148 en tecnico industral y \n" +
-                    "52 técnicos agropecuarios, atendidos por 2 \n" +
-                    "directores, 21 docentes y 8 personal aoministrativo\n",
+            text = "El Instituto Tecnológico Regional De La Laguna " +
+                    ", iniciando sus actividades el 26 de Septiembre de " +
+                    " 1965. A nivel medio superior se comenzó en " +
+                    " 1965 con el Bachillerato de Ciencias y Tecnologia en " +
+                    " tres opciones: Electrica, Mecanica automotriz " +
+                    " (combustión interna) y Mecánica (máquinas y " +
+                    "herramientas). La población escolar ascendió a " +
+                    "352 estudiantes inscritos en los siguientes niveles" +
+                    " 152 en medio superior, 148 en tecnico industral y " +
+                    "52 técnicos agropecuarios, atendidos por 2 " +
+                    "directores, 21 docentes y 8 personal aoministrativo.",
 
-            textAlign = TextAlign.Left,
+            textAlign = TextAlign.Center,
             //lineHeight = 10.sp,
-            fontSize = 10.sp,
+            fontSize = 18.sp,
             modifier = Modifier
                 .padding(
                     start = 16.dp,
