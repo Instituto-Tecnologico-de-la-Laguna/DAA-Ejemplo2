@@ -63,21 +63,27 @@ fun imageAndText(modifier: Modifier = Modifier, string: String )
 {
     Column (
     verticalArrangement =Arrangement.Center,
-    modifier = modifier.padding(50.dp)
+    modifier = modifier.padding(20.dp)
     ){
+        val image = painterResource(id = R.drawable.image)
+        Image(
+            painter = image,
+            contentDescription = null,
+            contentScale = ContentScale.Crop
+        )
             Text(
                 text = "Instituto Tecnológico de la Laguna",
                 lineHeight = 30.sp,
-
-                fontSize = 10.sp,
+//                textAlign = TextAlign.Center,
+                fontSize = 8.sp,
                 modifier =Modifier
                     .padding(10.dp)
-                    .align(alignment = Alignment.End)
             )
         Text(
             text = "El Instituto Tecnológico de la Laguna es una universidad pública ubicada en la ciudad de Torreón. El Instituto Tecnológico de la Laguna forma parte del Tecnológico Nacional de México",
             lineHeight = 10.sp,
-            fontSize = 10.sp
+            textAlign = TextAlign.Center,
+            fontSize = 8.sp
         )
         Text(
             text = "El Instituto Tecnológico Regional De La Laguna, iniciando sus actividades el 26 de Septiembre de\n" +
@@ -86,9 +92,11 @@ fun imageAndText(modifier: Modifier = Modifier, string: String )
                     "52 técnicos agropecuarios, atendidos por 2 directores, 21 docentes y 8 personal\n" +
                     "aoministrativo",
 
-            textAlign = TextAlign.Center,
-            lineHeight = 12.sp,
-            fontSize = 8.sp
+            textAlign = TextAlign.Left,
+            lineHeight = 10.sp,
+            fontSize = 8.sp,
+            modifier = Modifier
+                .padding(10.dp)
         )
     }
 }
@@ -99,6 +107,6 @@ fun GreetingPreview() {
     DAAEjemplo2Theme {
         //Greeting(name = "android")
 //        imageAndText(string = "que tal")
-        image(name = "hola")
+        imageAndText(string = "Hi")
     }
 }
