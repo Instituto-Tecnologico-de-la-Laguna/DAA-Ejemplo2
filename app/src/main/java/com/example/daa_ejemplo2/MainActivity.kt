@@ -106,7 +106,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
+    }//VALE
 
     @Preview(showBackground = true)
     @Composable
