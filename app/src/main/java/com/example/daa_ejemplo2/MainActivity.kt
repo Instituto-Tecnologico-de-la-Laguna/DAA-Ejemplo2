@@ -51,12 +51,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
         )
         Text(
-            text = stringResource(R.string.title_itl),
+            text = stringResource(R.string.itl_title),
             modifier = modifier
                 .padding(16.dp,8.dp)
         )
         Text(
-            text = stringResource(R.string.header_itl),
+            text = stringResource(R.string.itl_header),
             lineHeight = 16.sp,
             fontSize = 15.sp,
             textAlign = TextAlign.Center,
@@ -65,7 +65,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 .align(Alignment.CenterHorizontally)
         )
         Text(
-            text = stringResource(R.string.body_itl),
+            text = stringResource(R.string.itl_body),
             lineHeight = 16.sp,
             fontSize = 15.sp,
             modifier = modifier
